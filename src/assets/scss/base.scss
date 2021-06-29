@@ -1,0 +1,91 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-primary;
+    margin: 0;
+  }
+  p {
+    font-family: $font-primary;
+    color: $color-text;
+    margin: 0;
+  }
+  ul {
+    -webkit-padding-start: 0px;
+    li {
+      list-style: none;
+    }
+  }
+  a {
+    text-decoration: none;
+    transition: 0.3s;
+    color: $color-text;
+    font-family: $font-primary;
+    &:hover {
+      text-decoration: none;
+      color: $color-text;
+    }
+  }
+  span,
+  label {
+    font-family: $font-primary;
+  }
+  input {
+    font-family: $font-primary;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 $container-padding;
+
+  @media screen and (max-width: $xl) {
+    padding: 0 $container-padding-mobile;
+  }
+}
+
+.fade-default-enter-active, .fade-default-move {
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(.81,.22,.25,.9);
+  transition-property: opacity, transform;
+}
+.fade-default-leave-active {
+  transition: 500ms cubic-bezier(.3,.82,.01,.99);
+  transition-property: opacity, transform;
+}
+.fade-default-enter {
+  transform: translateX(30px);
+  opacity: 0;
+}
+.fade-default-enter-to {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-default-leave-active {
+  position: absolute;
+}
+
+.fade-default-leave-to {
+  opacity: 0;
+  transform: translateX(0)
+}
+
+@import "./pagination"

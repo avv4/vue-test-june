@@ -1,0 +1,21 @@
+{
+  "sorting": {
+    "title": "Sort by",
+    "id": "ID",
+    "name": "Name",
+    "age": "Age",
+    "ascending": "Ascending sort",
+    "descending": "Descending sort"
+  },
+
+  "view": {
+    "title": "View",
+    "table": "Table",
+    "preview": "Preview"
+  },
+
+  "table": {
+    "sorry": "Sorry, no people found",
+    "search": "Search"
+  }
+}

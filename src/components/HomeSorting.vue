@@ -88,7 +88,10 @@
           this.$router.push({ query })
         }
 
-        this.order = key
+        this.order = key;
+        if (!this.sortName) {
+          this.sortName = "id"
+        }
         this.sortingWithProps(this.sortName)
       },
 
